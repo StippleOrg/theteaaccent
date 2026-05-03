@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tea Accent — Ayurvedic Teas & Handmade Tea Wares | Australia</title>
+  <meta name="description" content="Premium Ayurvedic tea blends and handmade tea wares, shipped across Australia. Ashwagandha for calm. Moringa for strength. Turmeric for balance. Free shipping over $70 AUD.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            terracotta: {
+              50:  '#fdf5f0',
+              100: '#fae8dc',
+              200: '#f5ccb3',
+              300: '#eda882',
+              400: '#e07d4f',
+              500: '#c8603a',
+              600: '#a84d2e',
+              700: '#8a3d26',
+              800: '#6e3020',
+              900: '#5a271a',
+            },
+            sage: {
+              50:  '#f4f7f2',
+              100: '#e5ede0',
+              200: '#c8d9be',
+              300: '#a3be94',
+              400: '#7d9f6b',
+              500: '#5f8250',
+              600: '#4a6840',
+              700: '#3b5233',
+              800: '#2f4129',
+              900: '#263521',
+            },
+            cream: {
+              50:  '#fdfbf7',
+              100: '#f9f4eb',
+              200: '#f2e8d4',
+              300: '#e8d5b5',
+              400: '#d9bc8e',
+            },
+          },
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+            sans:  ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+
+    /* Hero gradient overlay */
+    .hero-overlay {
+      background: linear-gradient(
+        135deg,
+        rgba(90, 39, 26, 0.72) 0%,
+        rgba(63, 82, 51, 0.55) 60%,
+        rgba(90, 39, 26, 0.30) 100%
+      );
+    }
+
+    /* Hero background — warm earthy SVG pattern as fallback */
+    .hero-bg {
+      background-color: #8a3d26;
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(200, 96, 58, 0.6) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(95, 130, 80, 0.5) 0%, transparent 55%),
+        radial-gradient(ellipse at 60% 80%, rgba(232, 213, 181, 0.3) 0%, transparent 50%);
+    }
+
+    /* Decorative leaf SVG inline */
+    .leaf-icon::before { content: '🌿'; }
+
+    /* Card hover lift */
+    .product-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .product-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(90,39,26,0.15); }
+
+    /* Button press */
+    .btn-primary:active { transform: scale(0.98); }
+
+    /* Star colour */
+    .star { color: #c8603a; }
+
+    /* Ribbon shimmer */
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position:  200% center; }
+    }
+    .promo-ribbon {
+      background: linear-gradient(90deg, #5f8250 0%, #7d9f6b 40%, #5f8250 60%, #4a6840 100%);
+      background-size: 200% auto;
+      animation: shimmer 4s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-cream-50 text-stone-800 font-sans antialiased">
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav class="sticky top-0 z-50 bg-cream-50 border-b border-cream-300 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 group">
+        <span class="text-2xl">🍃</span>
+        <span class="font-serif text-xl font-bold text-terracotta-700 group-hover:text-terracotta-600 transition-colors">The Tea Accent</span>
+      </a>
+      <!-- Desktop nav links -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-stone-600">
+        <a href="#products"  class="hover:text-terracotta-600 transition-colors">Shop</a>
+        <a href="#ayurveda"  class="hover:text-terracotta-600 transition-colors">Why Ayurvedic?</a>
+        <a href="#bundles"   class="hover:text-terracotta-600 transition-colors">Gift Bundles</a>
+        <a href="#products"  class="ml-2 inline-flex items-center gap-1 bg-terracotta-600 hover:bg-terracotta-700 text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors btn-primary">Shop Now</a>
+      </div>
+      <!-- Mobile CTA -->
+      <a href="#products" class="md:hidden inline-flex items-center bg-terracotta-600 hover:bg-terracotta-700 text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors btn-primary">Shop</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero-bg relative overflow-hidden min-h-[88vh] flex items-center">
+    <!-- Decorative circles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-sage-400 opacity-20"></div>
+      <div class="absolute bottom-0 -left-16 w-72 h-72 rounded-full bg-terracotta-300 opacity-25"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-cream-200 opacity-10"></div>
+    </div>
+    <div class="hero-overlay absolute inset-0"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+      <!-- Eyebrow -->
+      <span class="inline-block mb-4 px-4 py-1 rounded-full bg-cream-100 bg-opacity-20 text-cream-100 text-xs font-semibold tracking-widest uppercase border border-cream-200 border-opacity-30">
+        Ayurvedic Teas &amp; Tea Wares · Australia
+      </span>
+
+      <!-- Headline -->
+      <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-cream-50 leading-tight mb-6">
+        Tea blended with purpose.<br class="hidden sm:block">
+        <span class="text-terracotta-200">Rooted in Ayurveda.</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="max-w-2xl mx-auto text-cream-200 text-lg sm:text-xl leading-relaxed mb-10">
+        Ashwagandha for calm. Moringa for strength. Turmeric for balance.<br class="hidden sm:block">
+        Premium herbal blends and handmade tea wares, shipped across Australia.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <a href="#products"
+           class="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold text-base px-8 py-4 rounded-full shadow-lg transition-colors">
+          Shop the Blends
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+        <a href="#bundles"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent border-2 border-cream-200 text-cream-100 hover:bg-cream-100 hover:bg-opacity-10 font-semibold text-base px-8 py-4 rounded-full transition-colors">
+          See Gift Bundles
+        </a>
+      </div>
+
+      <!-- Trust badge -->
+      <div class="inline-flex items-center gap-2 bg-sage-700 bg-opacity-60 border border-sage-400 border-opacity-40 text-sage-100 text-sm font-medium px-5 py-2 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-sage-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+        </svg>
+        Free shipping on orders over $70 AUD
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FUNCTIONAL BENEFITS BAR
+  ============================================================ -->
+  <section class="bg-cream-100 border-b border-cream-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Stress Relief -->
+        <a href="#products" class="group flex flex-col items-center text-center p-6 rounded-2xl hover:bg-cream-200 transition-colors">
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-sage-100 mb-4 group-hover:bg-sage-200 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-sage-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3C7 3 3 7.5 3 12c0 2.5 1 4.8 2.7 6.4M12 3c5 0 9 4.5 9 9 0 2.5-1 4.8-2.7 6.4M12 3v18M3 12h18"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-terracotta-700 mb-2">Stress Relief</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Ashwagandha blends formulated to support your nervous system. An adaptogen with a long record in Ayurvedic practice.
+          </p>
+        </a>
+
+        <!-- Immune Support -->
+        <a href="#products" class="group flex flex-col items-center text-center p-6 rounded-2xl hover:bg-cream-200 transition-colors">
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-terracotta-100 mb-4 group-hover:bg-terracotta-200 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-terracotta-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m14.9-6.34l-.71.71M6.47 17.53l-.71.71m12.02 0l-.71-.71M6.47 6.47l-.71-.71M12 7a5 5 0 100 10A5 5 0 0012 7z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-terracotta-700 mb-2">Immune Support</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Moringa and Tulsi blends for daily resilience. Moringa delivers concentrated micronutrients; Tulsi supports immune response.
+          </p>
+        </a>
+
+        <!-- Digestive Balance -->
+        <a href="#products" class="group flex flex-col items-center text-center p-6 rounded-2xl hover:bg-cream-200 transition-colors">
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-amber-100 mb-4 group-hover:bg-amber-200 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-amber-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343M12 4v1m0 14v1m7-8h1M3 12H2m15.07-7.07l-.707.707M7.636 16.364l-.707.707"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-terracotta-700 mb-2">Digestive Balance</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Turmeric and ginger blends to settle and restore. Turmeric's curcumin supports the gut; ginger aids motility and reduces bloating.
+          </p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURED PRODUCTS
+  ============================================================ -->
+  <section id="products" class="bg-cream-50 py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section heading -->
+      <div class="text-center mb-10">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-terracotta-800 mb-3">
+          What to drink — and what to drink it from.
+        </h2>
+        <p class="text-stone-500 text-base max-w-xl mx-auto">
+          Each blend is formulated around a specific herb and its documented function. Pair with a handmade piece for the full ritual.
+        </p>
+      </div>
+
+      <!-- Promo ribbon -->
+      <div class="promo-ribbon text-white text-sm font-semibold text-center py-3 px-4 rounded-xl mb-8 tracking-wide">
+        Spend $50 or more to access bundle pricing &nbsp;·&nbsp; Free shipping over $70 AUD
+      </div>
+
+      <!-- Product grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1: Ashwagandha Calm Blend -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden border border-cream-300 flex flex-col">
+          <!-- Image placeholder -->
+          <div class="relative h-52 bg-gradient-to-br from-sage-100 to-sage-200 flex items-center justify-center">
+            <span class="text-6xl">🌿</span>
+            <span class="absolute top-3 left-3 bg-sage-600 text-white text-xs font-semibold px-2 py-1 rounded-full">Stress Relief</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-serif text-base font-bold text-stone-800 mb-1">Ashwagandha Calm Blend</h3>
+            <p class="text-stone-500 text-xs leading-relaxed mb-3 flex-1">Loose-leaf tisane. Supports the nervous system and promotes restful sleep via Ashwagandha root.</p>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-bold text-terracotta-700 text-lg">$28.00 AUD</span>
+              <span class="text-xs text-stone-400">50 g</span>
+            </div>
+            <button class="btn-primary w-full bg-terracotta-600 hover:bg-terracotta-700 text-white font-semibold text-sm py-3 rounded-full transition-colors">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Moringa Vitality Blend -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden border border-cream-300 flex flex-col">
+          <div class="relative h-52 bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
+            <span class="text-6xl">☀️</span>
+            <span class="absolute top-3 left-3 bg-green-700 text-white text-xs font-semibold px-2 py-1 rounded-full">Immune Support</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-serif text-base font-bold text-stone-800 mb-1">Moringa Vitality Blend</h3>
+            <p class="text-stone-500 text-xs leading-relaxed mb-3 flex-1">Loose-leaf tisane. Moringa and Tulsi deliver micronutrient density and daily immune resilience.</p>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-bold text-terracotta-700 text-lg">$28.00 AUD</span>
+              <span class="text-xs text-stone-400">50 g</span>
+            </div>
+            <button class="btn-primary w-full bg-terracotta-600 hover:bg-terracotta-700 text-white font-semibold text-sm py-3 rounded-full transition-colors">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Turmeric Restore Blend -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden border border-cream-300 flex flex-col">
+          <div class="relative h-52 bg-gradient-to-br from-amber-50 to-amber-100 flex items-center justify-center">
+            <span class="text-6xl">🔥</span>
+            <span class="absolute top-3 left-3 bg-amber-600 text-white text-xs font-semibold px-2 py-1 rounded-full">Digestive Balance</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-serif text-base font-bold text-stone-800 mb-1">Turmeric Restore Blend</h3>
+            <p class="text-stone-500 text-xs leading-relaxed mb-3 flex-1">Loose-leaf tisane. Turmeric and ginger work together to settle the gut and reduce bloating.</p>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-bold text-terracotta-700 text-lg">$28.00 AUD</span>
+              <span class="text-xs text-stone-400">50 g</span>
+            </div>
+            <button class="btn-primary w-full bg-terracotta-600 hover:bg-terracotta-700 text-white font-semibold text-sm py-3 rounded-full transition-colors">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: Tea Ware Gift Bundle -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden border-2 border-terracotta-300 flex flex-col relative">
+          <div class="absolute top-0 right-0 bg-terracotta-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl">Popular</div>
+          <div class="relative h-52 bg-gradient-to-br from-terracotta-50 to-cream-300 flex items-center justify-center">
+            <span class="text-6xl">🫖</span>
+            <span class="absolute top-3 left-3 bg-terracotta-700 text-white text-xs font-semibold px-2 py-1 rounded-full">Gift Bundle</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-serif text-base font-bold text-stone-800 mb-1">Handmade Tea Ware Gift Bundle</h3>
+            <p class="text-stone-500 text-xs leading-relaxed mb-3 flex-1">Pair a functional blend with a handmade cup. The gift no wellness store stocks.</p>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-bold text-terracotta-700 text-lg">From $55.00 AUD</span>
+              <span class="text-xs text-sage-600 font-semibold">Bundle pricing</span>
+            </div>
+            <button class="btn-primary w-full bg-terracotta-600 hover:bg-terracotta-700 text-white font-semibold text-sm py-3 rounded-full transition-colors">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- View all -->
+      <div class="text-center mt-10">
+        <a href="#" class="inline-flex items-center gap-2 text-terracotta-600 hover:text-terracotta-800 font-semibold text-sm border-b border-terracotta-300 hover:border-terracotta-600 pb-0.5 transition-colors">
+          View all products
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AYURVEDIC EXPLAINER
+  ============================================================ -->
+  <section id="ayurveda" class="bg-sage-50 py-20 border-t border-sage-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-12">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sage-800 mb-3">Why Ayurvedic tea?</h2>
+        <p class="text-stone-500 text-sm max-w-md mx-auto">Herb-specific function, not generic wellness claims.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: editorial copy -->
+        <div>
+          <p class="text-stone-700 text-base leading-relaxed mb-5">
+            Ayurvedic blending pairs each herb with a specific physiological function. That means you know exactly what you're drinking and why.
+          </p>
+          <ul class="space-y-5 mb-8">
+            <li class="flex gap-4">
+              <div class="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-sage-200 flex items-center justify-center text-lg">🌿</div>
+              <div>
+                <h4 class="font-semibold text-stone-800 mb-0.5">Ashwagandha — adaptogen for stress</h4>
+                <p class="text-stone-600 text-sm leading-relaxed">Classified as an adaptogen, Ashwagandha supports the body's stress-response system. It helps regulate cortisol and promotes restful sleep without sedation.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <div class="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-lg">🌱</div>
+              <div>
+                <h4 class="font-semibold text-stone-800 mb-0.5">Moringa — micronutrient density, immune support</h4>
+                <p class="text-stone-600 text-sm leading-relaxed">Moringa leaf is dense in vitamins C, A, and iron. Paired with Tulsi, it supports daily immune function without stimulants.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <div class="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-lg">🟡</div>
+              <div>
+                <h4 class="font-semibold text-stone-800 mb-0.5">Turmeric — anti-inflammatory, digestive aid</h4>
+                <p class="text-stone-600 text-sm leading-relaxed">Curcumin, turmeric's active compound, supports gut lining integrity and reduces inflammatory markers. Ginger amplifies absorption and aids motility.</p>
+              </div>
+            </li>
+          </ul>
+          <a href="/why-ayurvedic-tea"
+             class="inline-flex items-center gap-2 bg-sage-700 hover:bg-sage-800 text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors btn-primary">
+            Read the full ingredient guide
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Right: pull quote -->
+        <div class="bg-white rounded-2xl p-8 border border-sage-200 shadow-sm relative">
+          <div class="absolute -top-4 left-8 text-sage-300 text-6xl font-serif leading-none select-none">"</div>
+          <blockquote class="pt-4">
+            <p class="text-stone-700 text-base leading-relaxed italic mb-6">
+              I've recommended Ashwagandha to clients for years. What I look for is a preparation that doesn't bury the herb under flavouring. The Tea Accent's Calm Blend is straightforward — you can taste the root, and the dosage feels considered. My clients who've switched to it report better sleep within the first two weeks.
+            </p>
+            <footer class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-sage-200 flex items-center justify-center text-sage-700 font-bold text-sm">NP</div>
+              <div>
+                <p class="font-semibold text-stone-800 text-sm">Natasha P.</p>
+                <p class="text-stone-500 text-xs">Naturopath, Melbourne VIC</p>
+              </div>
+            </footer>
+          </blockquote>
+          <!-- Decorative herb motif -->
+          <div class="mt-6 pt-6 border-t border-cream-200 flex items-center gap-3">
+            <div class="flex gap-1">
+              <span class="star text-sm">★</span>
+              <span class="star text-sm">★</span>
+              <span class="star text-sm">★</span>
+              <span class="star text-sm">★</span>
+              <span class="star text-sm">★</span>
+            </div>
+            <span class="text-stone-400 text-xs">Verified purchase</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SOCIAL PROOF
+  ============================================================ -->
+  <section class="bg-cream-100 py-20 border-t border-cream-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-12">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-terracotta-800 mb-3">What Australian customers are saying.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+
+        <!-- Review 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-cream-300 shadow-sm flex flex-col">
+          <div class="flex gap-0.5 mb-4">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="text-stone-700 text-sm leading-relaxed flex-1 mb-5">
+            "I started the Ashwagandha Calm Blend three weeks ago and my sleep has noticeably improved. I was sceptical at first — I've tried a lot of 'calming' teas that taste like grass and do nothing. This one is different. The flavour is earthy and the effect is real."
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-cream-200">
+            <div class="w-9 h-9 rounded-full bg-sage-200 flex items-center justify-center text-sage-700 font-bold text-xs">P</div>
+            <div>
+              <p class="font-semibold text-stone-800 text-sm">Priya</p>
+              <p class="text-stone-400 text-xs">Melbourne, VIC</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-cream-300 shadow-sm flex flex-col">
+          <div class="flex gap-0.5 mb-4">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="text-stone-700 text-sm leading-relaxed flex-1 mb-5">
+            "The handmade cup arrived beautifully packaged — it felt like a proper gift, not something thrown in a box. I bought the bundle for my sister's birthday and she's already ordered her own Moringa blend. The quality of the tea ware is genuinely impressive."
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-cream-200">
+            <div class="w-9 h-9 rounded-full bg-terracotta-200 flex items-center justify-center text-terracotta-700 font-bold text-xs">S</div>
+            <div>
+              <p class="font-semibold text-stone-800 text-sm">Sarah</p>
+              <p class="text-stone-400 text-xs">Sydney, NSW</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-cream-300 shadow-sm flex flex-col">
+          <div class="flex gap-0.5 mb-4">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="text-stone-700 text-sm leading-relaxed flex-1 mb-5">
+            "I've been drinking the Turmeric Restore Blend every morning for a month. My digestion has settled considerably — less bloating after meals. I appreciate that the product page tells you exactly what each herb does. No vague promises."
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-cream-200">
+            <div class="w-9 h-9 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 font-bold text-xs">M</div>
+            <div>
+              <p class="font-semibold text-stone-800 text-sm">Marcus</p>
+              <p class="text-stone-400 text-xs">Brisbane, QLD</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust line -->
+      <div class="text-center">
+        <p class="inline-flex items-center gap-2 text-stone-500 text-sm font-medium bg-white border border-cream-300 px-6 py-3 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          Blended and packed in Australia. Shipped nationwide.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GIFT BUNDLES CALLOUT
+  ============================================================ -->
+  <section id="bundles" class="bg-terracotta-600 py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+
+        <!-- Decorative -->
+        <div class="flex justify-center gap-3 mb-6 text-3xl">
+          <span>🫖</span><span>🌿</span><span>🎁</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cream-50 mb-5">
+          Give something that actually does something.
+        </h2>
+        <p class="text-terracotta-100 text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+          Pair a handmade tea ware piece with a functional blend. Stress-relief sets, immunity bundles, and digestive kits — curated and ready to ship.
+        </p>
+
+        <!-- Feature pills -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10">
+          <span class="bg-terracotta-700 bg-opacity-60 text-cream-100 text-xs font-medium px-4 py-2 rounded-full border border-terracotta-400">Handmade tea ware</span>
+          <span class="bg-terracotta-700 bg-opacity-60 text-cream-100 text-xs font-medium px-4 py-2 rounded-full border border-terracotta-400">Functional Ayurvedic blends</span>
+          <span class="bg-terracotta-700 bg-opacity-60 text-cream-100 text-xs font-medium px-4 py-2 rounded-full border border-terracotta-400">Gift-ready packaging</span>
+          <span class="bg-terracotta-700 bg-opacity-60 text-cream-100 text-xs font-medium px-4 py-2 rounded-full border border-terracotta-400">Ships Australia-wide</span>
+        </div>
+
+        <a href="#"
+           class="btn-primary inline-flex items-center gap-2 bg-cream-50 hover:bg-white text-terracotta-700 font-bold text-base px-8 py-4 rounded-full shadow-lg transition-colors">
+          See Gift Bundles
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINAL CTA
+  ============================================================ -->
+  <section class="bg-cream-50 py-24 border-t border-cream-300">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center">
+
+      <span class="inline-block mb-5 text-4xl">🍃</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-terracotta-800 mb-4">
+        Start with one blend.<br>Build a ritual.
+      </h2>
+      <p class="text-stone-500 text-base mb-8 leading-relaxed">
+        Free shipping on orders over $70 AUD.<br>
+        Spend $50 or more to access bundle pricing.
+      </p>
+
+      <a href="#products"
+         class="btn-primary inline-flex items-center gap-2 bg-terracotta-600 hover:bg-terracotta-700 text-white font-bold text-base px-10 py-4 rounded-full shadow-lg transition-colors mb-6">
+        Shop All Products
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+
+      <p class="text-stone-400 text-sm">
+        Questions? Email us at
+        <a href="mailto:hello@theteaaccent.com.au" class="text-terracotta-600 hover:text-terracotta-800 underline underline-offset-2 transition-colors">
+          hello@theteaaccent.com.au
+        </a>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="bg-stone-900 text-stone-400 pt-16 pb-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Four-column grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+
+        <!-- Col 1: Brand -->
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xl">🍃</span>
+            <span class="font-serif text-lg font-bold text-cream-100">The Tea Accent</span>
+          </div>
+          <p class="text-stone-500 text-sm leading-relaxed">
+            Ayurvedic teas and handmade tea wares, Australia.
+          </p>
+        </div>
+
+        <!-- Col 2: Shop -->
+        <div>
+          <h4 class="text-stone-300 font-semibold text-sm mb-4 uppercase tracking-wider">Shop</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-cream-200 transition-colors">All Teas</a></li>
+            <li><a href="#" class="hover:text-cream-200 transition-colors">Tea Wares</a></li>
+            <li><a href="#bundles" class="hover:text-cream-200 transition-colors">Gift Bundles</a></li>
+            <li><a href="#" class="hover:text-cream-200 transition-colors">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Learn -->
+        <div>
+          <h4 class="text-stone-300 font-semibold text-sm mb-4 uppercase tracking-wider">Learn</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/why-ayurvedic-tea" class="hover:text-cream-200 transition-colors">Why Ayurvedic Tea?</a></li>
+            <li><a href="/why-ayurvedic-tea" class="hover:text-cream-200 transition-colors">Ingredient Guide</a></li>
+            <li><a href="#" class="hover:text-cream-200 transition-colors">Sourcing Standards</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Help -->
+        <div>
+          <h4 class="text-stone-300 font-semibold text-sm mb-4 uppercase tracking-wider">Help</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-cream-200 transition-colors">Shipping &amp; Returns</a></li>
+            <li><a href="mailto:hello@theteaaccent.com.au" class="hover:text-cream-200 transition-colors">Contact</a></li>
+            <li><a href="#" class="hover:text-cream-200 transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-stone-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-600">
+        <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+          <span>&copy; 2026 The Tea Accent. All rights reserved.</span>
+          <span class="hidden sm:inline">·</span>
+          <span>Australia</span>
+        </div>
+
+        <!-- Payment icons (placeholder) -->
+        <div class="flex items-center gap-2">
+          <span class="bg-stone-800 text-stone-400 text-xs px-2 py-1 rounded font-mono">VISA</span>
+          <span class="bg-stone-800 text-stone-400 text-xs px-2 py-1 rounded font-mono">MC</span>
+          <span class="bg-stone-800 text-stone-400 text-xs px-2 py-1 rounded font-mono">AMEX</span>
+          <span class="bg-stone-800 text-stone-500 text-xs px-2 py-1 rounded font-mono border border-stone-700">Afterpay (soon)</span>
+        </div>
+      </div>
+
+      <!-- Built by Stipple -->
+      <div class="mt-6 text-center">
+        <p class="text-stone-700 text-xs">
+          Built by <a href="https://stipple.sh" class="text-stone-600 hover:text-stone-400 underline underline-offset-2 transition-colors">Stipple.sh</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
