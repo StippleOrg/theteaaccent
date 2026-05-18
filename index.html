@@ -543,6 +543,67 @@
     </div>
   </section>
 
+
+  <!-- ============================================================
+       EMAIL SIGNUP — JOIN THE RITUAL
+       Added 2026-05-18: GTM strategy priority action — build email list.
+       Placement between bundles + final CTA maximises intent-moment capture.
+  ============================================================ -->
+  <section id="newsletter" class="bg-sage-50 py-20 border-t border-sage-100">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center">
+
+      <!-- Icon -->
+      <div class="flex justify-center mb-5 text-4xl">🍵</div>
+
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sage-800 mb-3">
+        Weekly rituals, straight to your inbox.
+      </h2>
+      <p class="text-stone-500 text-base leading-relaxed mb-8 max-w-md mx-auto">
+        Ayurvedic tea guides, new blend announcements, and first access to bundles — one email, weekly, no noise.
+      </p>
+
+      <!-- Signup form — submits to Mailchimp embedded form placeholder -->
+      <!-- Replace action URL with your Mailchimp/Klaviyo list URL before going live -->
+      <form
+        class="flex flex-col sm:flex-row items-center gap-3 max-w-md mx-auto"
+        action="#"
+        method="POST"
+        onsubmit="handleEmailSignup(event)"
+      >
+        <label for="email-signup" class="sr-only">Email address</label>
+        <input
+          id="email-signup"
+          type="email"
+          name="email"
+          required
+          autocomplete="email"
+          placeholder="your@email.com"
+          class="w-full sm:flex-1 px-4 py-3 rounded-full border border-sage-300 bg-white text-stone-700 text-sm placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-sage-400 focus:border-transparent transition-shadow"
+          aria-label="Email address for newsletter"
+        />
+        <button
+          type="submit"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sage-600 hover:bg-sage-700 text-white font-semibold text-sm px-6 py-3 rounded-full shadow-md transition-colors whitespace-nowrap"
+        >
+          Join the Ritual
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Success state (shown via JS after submit) -->
+      <p id="email-signup-success" class="hidden mt-5 text-sage-700 text-sm font-medium">
+        ✅ You're in. Watch your inbox next Monday.
+      </p>
+
+      <p class="mt-5 text-stone-400 text-xs">
+        Unsubscribe any time. We respect your inbox.
+      </p>
+
+    </div>
+  </section>
+
   <!-- ============================================================
        FINAL CTA
   ============================================================ -->
@@ -656,5 +717,18 @@
     </div>
   </footer>
 
+  <script>
+    function handleEmailSignup(e) {
+      e.preventDefault();
+      var form = e.target;
+      var email = form.querySelector('input[type=email]').value;
+      // TODO: Wire to Mailchimp/Klaviyo API endpoint before launch
+      // For now: show success state and disable form to prevent double-submit
+      form.style.display = 'none';
+      document.getElementById('email-signup-success').classList.remove('hidden');
+      // Optional: send to your own analytics or capture endpoint
+      console.log('Email signup:', email);
+    }
+  </script>
 </body>
 </html>
